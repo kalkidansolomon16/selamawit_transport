@@ -69,14 +69,14 @@ actions:{
           }
         }
       },
-      logOutUser(router){
+      logOutUser(){
         localStorage.removeItem('token')
         localStorage.removeItem('signin')
-      localStorage.removeItem('user_name')
+    //   localStorage.removeItem('user_name')
       localStorage.removeItem('userID')
-      if(router){
+    //   if(router){
         router.push({ name: 'Login' });
-      }
+    //   }
       }
 }
 

@@ -10,7 +10,7 @@
                 <div class="text-white ml-3 text-lg font-semibold">Selamawit Transaport</div>
             </div> 
             
-                <div class="flex w-1/12 py-3 hover:bg-gray-500 px-2 h-11 mr-2" @click="toggleButton">
+                <div class="flex w-1/12 py-3 hover:bg-gray-500 px-2 h-11 mr-2 mt-2 cursor-pointer" @click="toggleButton">
                     <div class="w-1/4">
                         <img src="/images/logo_icon.jpeg" alt="" class="rounded-full">
                     </div>
@@ -23,12 +23,12 @@
     </div>
    
   </div>
-   <div class=" absolute bg-white rounded-md text-sm p-3 rounded-white shadow-md w-1/7 ml-297 -mt-5 z-10" v-if="activeButton">
-                 <div class="flex text-black">
+   <div class=" absolute bg-white rounded-md text-sm p-3 rounded-white shadow-md w-1/7 ml-297 -mt-3 z-10" v-if="activeButton">
+                 <div class="flex text-black cursor-pointer">
                    <i class="fa-solid fa-gear"></i>
                    <p class="-mt-1 ml-2">Setting</p>
                  </div> 
-                   <div class="flex text-black mt-6">
+                   <div class="flex text-black mt-6 cursor-pointer" @click="authStore.logOutUser">
                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
                    <p class="-mt-1 ml-2">Logout</p>
                  </div>  
@@ -36,11 +36,13 @@
 </template>
 
 <script setup>
+import { useAuthStore } from '@/stores/auth';
 import { ref } from 'vue';
 const activeButton = ref(false)
 const toggleButton = ()=>{
     activeButton.value = !activeButton.value
 }
+const authStore = useAuthStore()
 </script>
 
 <style>

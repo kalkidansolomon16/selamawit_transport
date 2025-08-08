@@ -9,27 +9,33 @@
         </div>
         <div>
             <p class="text-sm">Email</p>
-            <input type="email" placeholder="@  john@doe.com" class="mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold w-10/10 focus:outline-blue-300" v-model="authStore.email">
+            <input type="email" placeholder="@  john@doe.com" class="mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold w-10/10 focus:outline-blue-300 bg-blue-50" v-model="authStore.email">
         </div>
           <div class="mt-5">
             <p class="text-sm">Password</p>
-            <div class="mt-2 border border-gray-300 rounded-md p-2  font-semibold w-10/10 focus:outline-blue-300">
+            <div class="mt-2 border border-gray-300 rounded-md p-2  font-semibold w-10/10 focus:outline-blue-300 bg-blue-50">
                 <i class="fa-solid fa-lock"></i>
-                <input type="password" placeholder="........" class="ml-1 placeholder:text-3xl focus:outline-none" v-model="authStore.password">
+                <input type="password" placeholder="........" class="ml-1 placeholder:text-3xl focus:outline-none " v-model="authStore.password">
             </div>
         </div>
         <div>
-            <button class="w-10/10 bg-blue-500 rounded-md mt-5 p-2 text-white hover:bg-cyan-600 cursor-pointer" @click="authStore.handleLogin">Sign in</button>
+            <Button class="w-10/10 bg-blue-500 rounded-md mt-5 p-2 text-white hover:bg-cyan-600 cursor-pointer" @click="authStore.handleLogin">Sign in</Button>
         </div>
     </div>
 </div>
 </template>
 
 <script>
+import { Button } from '@/components/ui/button'
+// import Input from '@/components/ui/input';
 import { onMounted, ref } from 'vue';
-
+import axios from 'axios';
 import { useAuthStore } from '@/stores/auth';
 export default {
+    components:{
+Button,
+
+    },
 setup(){
     // const email = ref('')
     // const password = ref('')
