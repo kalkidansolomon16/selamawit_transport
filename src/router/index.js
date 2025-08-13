@@ -13,6 +13,8 @@ import Bank from '../views/Bank.vue'
 import Clients from '../views/Clients.vue'
 import System_user from '../views/System_user.vue'
 import Role from '../views/Role.vue'
+import OwnSummary from '../views/OwnSummary.vue'
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -87,6 +89,12 @@ const router = createRouter({
       path: '/role',
       name: 'Role',
       component: Role,
+    },
+
+    {
+      path: '/own-summary',
+      name: 'OwnSummary',
+      component: OwnSummary
     },
     // Uncomment the following lines if you want to add an About page
     // {

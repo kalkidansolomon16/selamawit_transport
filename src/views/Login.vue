@@ -1,7 +1,7 @@
 <template>
 <div class="">
     <div class="background"></div>
-    <div class="content bg-white shadow-md w-1/4 mx-auto mt-40 p-3 rounded-lg">
+    <div class="content bg-white shadow-md lg:w-1/4 md:w-1/2 md:pb-10  mx-auto mt-40 lg:p-3 rounded-lg w-5/6 p-5">
         <div class="text-center">
 
             <h1 class=" heading font-bold text-lg mt-10 ">Login to your account</h1>

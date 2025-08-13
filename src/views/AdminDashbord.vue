@@ -1,136 +1,395 @@
 <template>
     <Navbar/>
-    
-    <SideBar class="mt-16"/>
-    <div class="shadow-md ml-68 px-3 py-2">
-        <div class="flex">
-<div class="mr-2"><i class="fa-solid fa-house"></i></div>
-            <h1 class="text-sm mt-1">Dashbord</h1>
-        </div>
-    </div>
-    <div class="bg-gray-200 -mt-10 h-200">
+    <div class="hidden lg:block">
 
-        <div class="ml-75 flex justify-between mt-10 pt-5 w-2/3 px-3">
-    <div class="">
-      <Card class="border-gray-200 rounded-md bg-white w-15/11 ">
-        <CardContent>
-         <div class="flex justify-between">
-            <div><i class="fa-regular fa-user text-2xl"></i></div>
-            <div class="ml-9"> 
-<h1 class="font-semibold text-right">{{ userCount }}.0</h1>
-<p class="text-sm">Syatem User</p>
-            </div>
-         </div>
-        </CardContent>
-      </Card>
+        <SideBar class="mt-16" />
     </div>
-     <div class="">
-      <Card class="border-gray-200 rounded-md bg-white w-15/11">
+    <div class="hidden lg:block shadow-md ml-68 px-3 py-2 border-b border-b-gray-200 ">
+        <div class="flex ">
+<div class="mr-2"><i class="fa-solid fa-house"></i></div>
+<h1 class="text-sm mt-1 text-gray-400">Dashbord</h1>
+</div>
+</div>
+  <div class="block lg:hidden shadow-md mt-14  px-3 py-2 border-b border-b-gray-200 ">
+        <div class="flex ">
+<div class="mr-2"><i class="fa-solid fa-house text-gray-400"></i></div>
+<h1 class="text-sm mt-1 text-gray-400">Dashbord</h1>
+</div>
+</div>
+
+<div class="bg-slate-100 -mt-10 h-200 hidden lg:block">
+
+    <div class="ml-75 flex justify-between mt-10 pt-5 w-2/3 px-3">
+        <div class="">
+            <Card class="border-gray-200 rounded-md bg-white w-15/11 ">
+                <CardContent>
+                    <div class="flex justify-between">
+                        <div><i class="fa-regular fa-user text-2xl"></i></div>
+                        <div class="ml-9"> 
+                            <h1 class="font-semibold text-right">{{ userCount }}.0</h1>
+                            <p class="text-sm">Syatem User</p>
+                        </div>
+                    </div>
+                </CardContent>
+            </Card>
+        </div>
+        <div class="">
+            <Card class="border-gray-200 rounded-md bg-white w-15/11">
         <CardContent>
-         <div class="flex justify-between">
+            <div class="flex justify-between">
             <div><i class="fa-solid fa-truck text-2xl text-blue-400"></i></div>
             <div class="ml-10"> 
 <h1 class="font-semibold text-right">{{ vehicleCount }}.0</h1>
 <p class="text-sm">Vehicles</p>
-            </div>
-         </div>
-        </CardContent>
-      </Card>
+</div>
+</div>
+</CardContent>
+</Card>
     </div>
-      <div>
-      <Card class="border-gray-200 rounded-md bg-white w-15/11">
-        <CardContent>
+    <div>
+        <Card class="border-gray-200 rounded-md bg-white w-15/11">
+            <CardContent>
          <div class="flex justify-between">
-            <div><i class="fa-solid fa-users text-2xl text-red-400"></i></div>
-            <div class="ml-10"> 
-<h1 class="font-semibold text-right">{{ employeeCount }}.0</h1>
-<p class="text-sm">Employees</p>
+             <div><i class="fa-solid fa-users text-2xl text-red-400"></i></div>
+             <div class="ml-10"> 
+                 <h1 class="font-semibold text-right">{{ employeeCount }}.0</h1>
+                 <p class="text-sm">Employees</p>
+                </div>
             </div>
-         </div>
         </CardContent>
-      </Card>
+    </Card>
     </div>
       <div class="-mr-20 ">
-      <Card class="border-gray-200 rounded-md bg-white w-15/11">
-        <CardContent>
-         <div class="flex justify-between">
-            <div><i class="fa-regular fa-clipboard text-2xl text-green-600"></i></div>
-            <div class="ml-10"> 
+          <Card class="border-gray-200 rounded-md bg-white w-15/11">
+              <CardContent>
+                  <div class="flex justify-between">
+                      <div><i class="fa-regular fa-clipboard text-2xl text-green-600"></i></div>
+                      <div class="ml-10"> 
 <h1 class="font-semibold text-right">{{ orderCount }}.0</h1>
 <p class="text-sm">Orders</p>
-            </div>
-         </div>
-        </CardContent>
-      </Card>
-    </div>
-        </div>
-                <div class="ml-75 flex justify-between  pt-5 w-2/3 px-3">
+</div>
+</div>
+</CardContent>
+</Card>
+</div>
+</div>
+<div class="ml-75 flex justify-between  pt-5 w-2/3 px-3">
     <div class="mr-5">
-      <Card class="border-gray-200 rounded-md bg-white w-14/11 ">
+        <Card class="border-gray-200 rounded-md bg-white w-14/11 ">
         <CardContent>
-         <div class="flex justify-between">
-            <div><i class="fa-solid fa-money-bill text-2xl"></i></div>
-            <div class="ml-9"> 
-<h1 class="font-semibold text-right ">{{ totalRevennue }}</h1>
-<p class="text-sm">Yearly Income</p>
+            <div class="flex justify-between">
+                <div><i class="fa-solid fa-money-bill text-2xl"></i></div>
+                <div class="ml-9"> 
+                    <h1 class="font-semibold text-right ">{{ totalRevennue }}</h1>
+                    <p class="text-sm">Yearly Income</p>
             </div>
          </div>
         </CardContent>
-      </Card>
-    </div>
+    </Card>
+</div>
      <div class="">
-      <Card class="border-gray-200 rounded-md bg-white w-13/11">
+         <Card class="border-gray-200 rounded-md bg-white w-13/11">
         <CardContent>
          <div class="flex justify-between">
-            <div><i class="fa-solid fa-e text-2xl text-red-400"></i></div>
-            <div class="ml-10"> 
-<h1 class="font-semibold text-right">{{ totalAmount }}</h1>
-<p class="text-sm">Yearly Expense</p>
+             <div><i class="fa-solid fa-e text-2xl text-red-400"></i></div>
+             <div class="ml-10"> 
+                 <h1 class="font-semibold text-right">{{ totalAmount }}</h1>
+                 <p class="text-sm">Yearly Expense</p>
             </div>
-         </div>
-        </CardContent>
-      </Card>
-    </div>
-      <div>
-      <Card class="border-gray-200 rounded-md bg-white w-13/11">
+        </div>
+    </CardContent>
+</Card>
+</div>
+<div>
+    <Card class="border-gray-200 rounded-md bg-white w-13/11">
         <CardContent>
          <div class="flex justify-between">
-            <div><i class="fa-solid fa-money-bill-1 text-2xl text-blue-400"></i></div>
-            <div class="ml-8"> 
+             <div><i class="fa-solid fa-money-bill-1 text-2xl text-blue-400"></i></div>
+             <div class="ml-8"> 
 <h1 class="font-semibold text-right">0.0</h1>
 <p class="text-sm">Monthly Income</p>
-            </div>
-         </div>
+</div>
+</div>
         </CardContent>
-      </Card>
-    </div>
-      <div class="-mr-25">
+    </Card>
+</div>
+<div class="-mr-25">
       <Card class="border-gray-200 rounded-md bg-white w-13/11">
-        <CardContent>
-         <div class="flex justify-between">
-            <div><i class="fa-solid fa-e text-2xl text-red-400"></i></div>
-            <div class=""> 
-<h1 class="font-semibold text-right">0.0</h1>
-<p class="text-sm">Monthly Expense</p>
-            </div>
-         </div>
+          <CardContent>
+              <div class="flex justify-between">
+                  <div><i class="fa-solid fa-e text-2xl text-red-400"></i></div>
+                  <div class=""> 
+                      <h1 class="font-semibold text-right">0.0</h1>
+                      <p class="text-sm">Monthly Expense</p>
+                    </div>
+                </div>
         </CardContent>
-      </Card>
+    </Card>
     </div>
-        </div>
+</div>
         <div class="ml-78 rounded-md mt-5 bg-white shadow-md pt-5 px-3 w-3/4 h-120">
-<div class="flex  ml-210">
-<div class="">
-    <Input type="number" placeholder="2025" class="border border-gray-300 rounded-md  px-3 focus:outline-none focus:ring focus:ring-blue-400" min="2025" />
+            <div class="flex  ml-210">
+                <div class="">
+                    <Input type="number" placeholder="2025" class="border border-gray-300 rounded-md  px-3 focus:outline-none focus:ring focus:ring-blue-400" min="2025" />
 </div>
 <div class="ml-5">
     <Button class="bg-blue-500 text-white px-5 cursor-pointer hover:bg-cyan-700">Get</Button>
 </div>
 </div>
-            <IncomeExpenseChart class="w-3/4 h-100 " />
+<IncomeExpenseChart class="w-3/4 h-100 " />
+</div>
+
+<Footer class="mt-12 ml-69 px-3 w-4/5 "/> 
+</div>
+<div class="bg-slate-100 block lg:hidden pb-10 md:h-270 ">
+        <div class="pt-10 w-6/7 md:hidden">
+            <Card class="border-gray-200 rounded-md bg-white w-7/8 mx-12">
+                <CardContent>
+                    <div class="flex justify-between">
+                        <div><i class="fa-regular fa-user text-2xl"></i></div>
+                        <div class="ml-9"> 
+                            <h1 class="font-semibold text-right">{{ userCount }}.0</h1>
+                            <p class="text-sm">Syatem User</p>
+                        </div>
+                    </div>
+                </CardContent>
+            </Card>
         </div>
-        <Footer class="ml-100"/> 
+           <div class="pt-4 w-6/7 md:hidden">
+            <Card class="border-gray-200 rounded-md bg-white w-7/8 mx-12">
+                <CardContent>
+                    <div class="flex justify-between">
+                        <div><i class="fa-solid fa-truck text-2xl text-blue-400"></i></div>
+                        <div class="ml-9"> 
+                   <h1 class="font-semibold text-right">{{ vehicleCount }}.0</h1>
+<p class="text-sm">Vehicles</p>
+                        </div>
+                    </div>
+                </CardContent>
+            </Card>
+        </div>
+        <div class="hidden md:block">
+
+            <div class="flex w-4/5 mx-auto">
+         <div class="pt-10 w-9/10">
+            <Card class="border-gray-200 rounded-md bg-white w-11/11 ">
+                <CardContent>
+                    <div class="flex justify-between">
+                        <div><i class="fa-regular fa-user text-2xl"></i></div>
+                        <div class="ml-9"> 
+                            <h1 class="font-semibold text-right">{{ userCount }}.0</h1>
+                            <p class="text-sm">Syatem User</p>
+                        </div>
+                    </div>
+                </CardContent>
+            </Card>
+        </div>
+           <div class="pt-10 w-9/10 ml-4 ">
+            <Card class="border-gray-200 rounded-md bg-white w-11/11 ">
+                <CardContent>
+                    <div class="flex justify-between">
+                        <div><i class="fa-solid fa-truck text-2xl text-blue-400"></i></div>
+                        <div class="ml-9"> 
+                   <h1 class="font-semibold text-right">{{ vehicleCount }}.0</h1>
+<p class="text-sm">Vehicles</p>
+                        </div>
+                    </div>
+                </CardContent>
+            </Card>
+        </div>
+            </div>
+        </div>
+          <div class="pt-4 w-6/7 md:hidden">
+        <Card class="border-gray-200 rounded-md bg-white w-7/8 mx-12">
+            <CardContent>
+         <div class="flex justify-between">
+             <div><i class="fa-solid fa-users text-2xl text-red-400"></i></div>
+             <div class="ml-10"> 
+                 <h1 class="font-semibold text-right">{{ employeeCount }}.0</h1>
+                 <p class="text-sm">Employees</p>
+                </div>
+            </div>
+        </CardContent>
+    </Card>
     </div>
+          <div class="pt-4 w-6/7 md:hidden">
+          <Card class="border-gray-200 rounded-md bg-white w-7/8 mx-12">
+              <CardContent>
+                  <div class="flex justify-between">
+                      <div><i class="fa-regular fa-clipboard text-2xl text-green-600"></i></div>
+                      <div class="ml-10"> 
+<h1 class="font-semibold text-right">{{ orderCount }}.0</h1>
+<p class="text-sm">Orders</p>
+</div>
+</div>
+</CardContent>
+</Card>
+</div>
+    <div class="hidden md:block">
+
+            <div class="flex w-4/5 mx-auto">
+         <div class="pt-2 w-9/10">
+            <Card class="border-gray-200 rounded-md bg-white w-11/11 ">
+                <CardContent>
+                    <div class="flex justify-between">
+                        <div><i class="fa-regular fa-user text-2xl"></i></div>
+                        <div class="ml-9"> 
+                            <h1 class="font-semibold text-right">{{ employeeCount }}.0</h1>
+                            <p class="text-sm">Employees</p>
+                        </div>
+                    </div>
+                </CardContent>
+            </Card>
+        </div>
+           <div class="pt-2 w-9/10 ml-4 ">
+            <Card class="border-gray-200 rounded-md bg-white w-11/11 ">
+                <CardContent>
+                    <div class="flex justify-between">
+                        <div><i class="fa-solid fa-truck text-2xl text-blue-400"></i></div>
+                        <div class="ml-9"> 
+                   <h1 class="font-semibold text-right">{{ orderCount }}.0</h1>
+<p class="text-sm">Orders</p>
+                        </div>
+                    </div>
+                </CardContent>
+            </Card>
+        </div>
+            </div>
+        </div>
+    <div class="pt-4 w-6/7 md:hidden">
+        <Card class="border-gray-200 rounded-md bg-white w-7/8 mx-12 ">
+        <CardContent>
+            <div class="flex justify-between">
+                <div><i class="fa-solid fa-money-bill text-2xl"></i></div>
+                <div class="ml-9"> 
+                    <h1 class="font-semibold text-right ">{{ totalRevennue }}</h1>
+                    <p class="text-sm">Yearly Income</p>
+            </div>
+         </div>
+        </CardContent>
+    </Card>
+</div>
+ <div class="pt-4 w-6/7 md:hidden">
+         <Card class="border-gray-200 rounded-md bg-white w-7/8 mx-12">
+        <CardContent>
+         <div class="flex justify-between">
+             <div><i class="fa-solid fa-e text-2xl text-red-400"></i></div>
+             <div class="ml-10"> 
+                 <h1 class="font-semibold text-right">{{ totalAmount }}</h1>
+                 <p class="text-sm">Yearly Expense</p>
+            </div>
+        </div>
+    </CardContent>
+</Card>
+</div>
+    <div class="hidden md:block">
+
+            <div class="flex w-4/5 mx-auto">
+         <div class="pt-2 w-9/10">
+            <Card class="border-gray-200 rounded-md bg-white w-11/11 ">
+                <CardContent>
+                    <div class="flex justify-between">
+                        <div><i class="fa-regular fa-user text-2xl"></i></div>
+                        <div class="ml-9"> 
+                            <h1 class="font-semibold text-right">{{ totalRevennue }}.0</h1>
+                            <p class="text-sm">Yearly Income</p>
+                        </div>
+                    </div>
+                </CardContent>
+            </Card>
+        </div>
+           <div class="pt-2 w-9/10 ml-4 ">
+            <Card class="border-gray-200 rounded-md bg-white w-11/11 ">
+                <CardContent>
+                    <div class="flex justify-between">
+                        <div><i class="fa-solid fa-truck text-2xl text-blue-400"></i></div>
+                        <div class="ml-9"> 
+                   <h1 class="font-semibold text-right">{{ totalAmount }}.0</h1>
+<p class="text-sm">Yearly Expense</p>
+                        </div>
+                    </div>
+                </CardContent>
+            </Card>
+        </div>
+            </div>
+        </div>
+   <div class="pt-4 w-6/7 md:hidden">
+        <Card class="border-gray-200 rounded-md bg-white w-7/8 mx-12 ">
+        <CardContent>
+            <div class="flex justify-between">
+                <div><i class="fa-solid fa-money-bill text-2xl"></i></div>
+                <div class="ml-9"> 
+                    <h1 class="font-semibold text-right ">0.0</h1>
+                    <p class="text-sm">Monthly Income</p>
+            </div>
+         </div>
+        </CardContent>
+    </Card>
+</div>
+    <div class="pt-4 w-6/7 md:hidden">
+      <Card class="border-gray-200 rounded-md bg-white w-7/8 mx-12">
+          <CardContent>
+              <div class="flex justify-between">
+                  <div><i class="fa-solid fa-e text-2xl text-red-400"></i></div>
+                  <div class=""> 
+                      <h1 class="font-semibold text-right">0.0</h1>
+                      <p class="text-sm">Monthly Expense</p>
+                    </div>
+                </div>
+        </CardContent>
+    </Card>
+</div>
+    <div class="hidden md:block">
+
+            <div class="flex w-4/5 mx-auto">
+         <div class="pt-2 w-9/10">
+            <Card class="border-gray-200 rounded-md bg-white w-11/11 ">
+                <CardContent>
+                    <div class="flex justify-between">
+                        <div><i class="fa-regular fa-user text-2xl"></i></div>
+                        <div class="ml-9"> 
+                            <h1 class="font-semibold text-right">0.0</h1>
+                            <p class="text-sm">Monthly Income</p>
+                        </div>
+                    </div>
+                </CardContent>
+            </Card>
+        </div>
+           <div class="pt-2 w-9/10 ml-4 ">
+            <Card class="border-gray-200 rounded-md bg-white w-11/11 ">
+                <CardContent>
+                    <div class="flex justify-between">
+                        <div><i class="fa-solid fa-truck text-2xl text-blue-400"></i></div>
+                        <div class="ml-9"> 
+                   <h1 class="font-semibold text-right">0.0</h1>
+<p class="text-sm">Monthly Expense</p>
+                        </div>
+                    </div>
+                </CardContent>
+            </Card>
+        </div>
+            </div>
+        </div>
+     <div class=" rounded-md mt-5 bg-white shadow-md pt-5 px-3 w-11/12 md:h-120 mx-auto h-100 ">
+            <div class="flex  mb-10">
+                <div class="">
+                    <Input type="number" placeholder="2025" class="border border-gray-300 rounded-md  px-3 focus:outline-none focus:ring focus:ring-blue-400" min="2025" />
+</div>
+<div class="ml-5">
+    <Button class="bg-blue-500 text-white px-5 cursor-pointer hover:bg-cyan-700">Get</Button>
+</div>
+</div>
+<div class="w-full overflow-y-auto max-h-[90vh]">
+    <IncomeExpenseChart />
+</div>
+<div>
+    <Footer class="mt-40  w-13/11 -ml-7"/> 
+</div>
+</div>
+    <div>
+        
+    </div>
+</div>
 
 </template>
 
