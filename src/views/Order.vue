@@ -28,38 +28,34 @@
 </div>
 <div class="fixed modal inset-0 bg-transaparent bg-opacity-50 flex items-center justify-center z-50 no-scrollbar roundd-md pt-35 pb-20 " v-if="modalOpen">
 
-     <div class="content bg-white shadow-md w-1/2 ml-70  p-3 rounded-lg  relative overflow-y-auto max-h-[90vh] no-scrollbar pb-10 px-10">
-      <button @click="modalOpen = false" class="ml-150 cursor-pointer bg-red-500 w-1/18 h-8 rounded-4xl text-white"><i class="fa-solid fa-xmark text-2xl"></i></button>
+     <div class="content bg-white shadow-md lg:w-1/2 lg:ml-70 w-3/4 -ml-17 md:-ml-35  p-3 rounded-lg  relative overflow-y-auto max-h-[90vh] no-scrollbar pb-10 lg:px-10">
+      <button @click="modalOpen = false" class="lg:ml-150 md:ml-150 ml-60 cursor-pointer bg-red-500 lg:w-1/18 lg:h-8 md:w-1/15 md:h-11 w-1/6 h-12 rounded-4xl text-white"><i class="fa-solid fa-xmark text-2xl"></i></button>
         <div class="text-center">
 
             <h1 class=" heading font-bold text-lg mt-10 ">Register New Order</h1>
            
         </div>
         <div class="flex mt-5">
-
           <div>
               <p class="text-sm">Order Name</p>
-              <input type="text" placeholder="enter order name..." class="mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold w-14/10 focus:outline-blue-300 bg-blue-50" v-model="model.orders.order_name">
+              <input type="text" placeholder="enter order name..." class="w-7/8 mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold lg:w-14/10 md:w-14/10 focus:outline-blue-300 bg-blue-50" v-model="model.orders.order_name">
           </div>
-            <div class="ml-24">
-              <p class="text-sm">Client  Name</p>
-
-                  
-                  <input type="text" placeholder="enter client name..." class="mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold w-14/10 focus:outline-blue-300 bg-blue-50" v-model="model.orders.client_name">
-             
+            <div class="lg:ml-24 md:ml-24 ml-1">
+              <p class="text-sm">Client  Name</p> 
+                  <input type="text" placeholder="enter client name..." class="w-7/8 mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold lg:w-14/10 md:w-14/10 focus:outline-blue-300 bg-blue-50" v-model="model.orders.client_name">
           </div>
         </div>
           <div class="flex mt-5">
 
           <div>
               <p class="text-sm">Plate Number</p>
-              <input type="text" placeholder="enter plate number..." class="mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold w-14/10 focus:outline-blue-300 bg-blue-50" v-model="model.orders.plate_number">
+              <input type="text" placeholder="enter plate number..." class="w-7/8 mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold lg:w-14/10 md:w-14/10 focus:outline-blue-300 bg-blue-50" v-model="model.orders.plate_number">
           </div>
-            <div class="ml-24">
+            <div class="lg:ml-24 md:ml-24 ml-1">
               <p class="text-sm">Driver  Name</p>
 
                   
-                  <input type="text" placeholder="enter driver name..." class="mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold w-14/10 focus:outline-blue-300 bg-blue-50" v-model="model.orders.driver_name">
+                  <input type="text" placeholder="enter driver name..." class="w-7/8 mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold lg:w-14/10 md:w-14/10 focus:outline-blue-300 bg-blue-50" v-model="model.orders.driver_name">
              
           </div>
         </div>
@@ -67,13 +63,13 @@
 
           <div>
               <p class="text-sm">Phone Number</p>
-              <input type="text" placeholder="enter phone number..." class="mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold w-14/10 focus:outline-blue-300 bg-blue-50" v-model="model.orders.phone_number">
+              <input type="text" placeholder="enter phone ..." class="w-7/8 mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold lg:w-14/10 md:w-14/10 focus:outline-blue-300 bg-blue-50" v-model="model.orders.phone_number">
           </div>
-            <div class="ml-24">
+            <div class="lg:ml-24 md:ml-24 ml-1">
               <p class="text-sm">Loading Place</p>
 
                   
-                  <input type="text" placeholder="enter loading place..." class="mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold w-14/10 focus:outline-blue-300 bg-blue-50" v-model="model.orders.loading_place">
+                  <input type="text" placeholder="enter loading ..." class="w-7/8 mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold lg:w-14/10 md:w-14/10 focus:outline-blue-300 bg-blue-50" v-model="model.orders.loading_place">
              
           </div>
         </div>
@@ -81,13 +77,13 @@
 
           <div>
               <p class="text-sm">Destination</p>
-              <input type="text" placeholder="enter destination..." class="mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold w-14/10 focus:outline-blue-300 bg-blue-50" v-model="model.orders.destination">
+              <input type="text" placeholder="enter destination..." class="w-7/8 mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold lg:w-14/10 md:w-14/10 focus:outline-blue-300 bg-blue-50" v-model="model.orders.destination">
           </div>
-            <div class="ml-24">
+            <div class="lg:ml-24 md:ml-24">
               <p class="text-sm">Load Type</p>
 
                   
-                  <input type="text" placeholder="enter load type..." class="mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold w-14/10 focus:outline-blue-300 bg-blue-50" v-model="model.orders.load_type">
+                  <input type="text" placeholder="enter load type..." class="w-7/8 mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold lg:w-14/10 md:w-14/10 focus:outline-blue-300 bg-blue-50" v-model="model.orders.load_type">
              
           </div>
         </div>
@@ -95,13 +91,13 @@
 
           <div>
               <p class="text-sm">Quintal</p>
-              <input type="number" placeholder="enter quintal amount" class="mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold w-14/10 focus:outline-blue-300 bg-blue-50" v-model="model.orders.quintal">
+              <input type="number" placeholder="enter quintal amount" class="w-7/8 mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold lg:w-14/10 md:w-14/10 focus:outline-blue-300 bg-blue-50" v-model="model.orders.quintal">
           </div>
-            <div class="ml-24">
+            <div class="lg:ml-24 md:ml-24 ml-1">
               <p class="text-sm">Given Tariff</p>
 
                   
-                  <input type="number" placeholder="enter given tariff..." class="mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold w-14/10 focus:outline-blue-300 bg-blue-50" v-model="model.orders.given_tariff">
+                  <input type="number" placeholder="enter given tariff..." class="w-7/8 mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold lg:w-14/10 md:w-14/10 focus:outline-blue-300 bg-blue-50" v-model="model.orders.given_tariff">
              
           </div>
         </div>
@@ -109,13 +105,13 @@
 
           <div>
               <p class="text-sm">Sub Tariff</p>
-              <input type="number" placeholder="enter sub tarif..." class="mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold w-14/10 focus:outline-blue-300 bg-blue-50" v-model="model.orders.sub_tariff">
+              <input type="number" placeholder="enter sub tarif..." class="w-7/8 mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold lg:w-14/10 md:w-14/10  focus:outline-blue-300 bg-blue-50" v-model="model.orders.sub_tariff">
           </div>
-            <div class="ml-24">
+            <div class="lg:ml-24 md:ml-24 ml-1 ">
               <p class="text-sm">Total Revenue</p>
 
                   
-                  <input type="number" placeholder="enter total revennue..." class="mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold w-14/10 focus:outline-blue-300 bg-blue-50" v-model="model.orders.total_revenue">
+                  <input type="number" placeholder="enter  revenue..." class="w-7/8 mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold lg:w-14/10 mg:w-14/10 focus:outline-blue-300 bg-blue-50" v-model="model.orders.total_revenue">
              
           </div>
         </div>
@@ -123,13 +119,13 @@
 
           <div>
               <p class="text-sm">Revenue</p>
-              <input type="number" placeholder="enter revenue..." class="mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold w-14/10 focus:outline-blue-300 bg-blue-50" v-model="model.orders.revenue">
+              <input type="number" placeholder="enter revenue..." class="w-7/8 mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold lg:w-14/10 md:w-14/10 focus:outline-blue-300 bg-blue-50" v-model="model.orders.revenue">
           </div>
-            <div class="ml-24">
+            <div class="lg:ml-24 md:ml-24 ml-1">
               <p class="text-sm">To be Paid</p>
 
                   
-                  <input type="number" placeholder="enter payment amount..." class="mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold w-14/10 focus:outline-blue-300 bg-blue-50" v-model="model.orders.to_be_paid">
+                  <input type="number" placeholder="enter amount..." class="w-7/8 mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold lg:w-14/10 md:w-14/10 focus:outline-blue-300 bg-blue-50" v-model="model.orders.to_be_paid">
              
           </div>
         </div>
@@ -137,13 +133,13 @@
 
           <div>
               <p class="text-sm">Arrival Date</p>
-              <input type="date" placeholder="enter arrival date..." class="mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold w-19/10 focus:outline-blue-300 bg-blue-50" v-model="model.orders.arrival_at_loading_site">
+              <input type="date" placeholder="enter arrival date..." class="w-6/7 mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold lg:w-19/10 md:w-19/10 focus:outline-blue-300 bg-blue-50" v-model="model.orders.arrival_at_loading_site">
           </div>
-            <div class="ml-38">
+            <div class="lg:ml-38 md:ml-38 -ml-1">
               <p class="text-sm">Loading Date</p>
 
                   
-                  <input type="date" placeholder="enter loading date..." class="mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold w-19/10 focus:outline-blue-300 bg-blue-50" v-model="model.orders.loading_date">
+                  <input type="date" placeholder="enter loading date..." class="w-6/7 mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold lg:w-19/10 md:w-19/10 focus:outline-blue-300 bg-blue-50" v-model="model.orders.loading_date">
              
           </div>
         </div>
@@ -151,13 +147,13 @@
 
           <div>
               <p class="text-sm">Current Condition</p>
-              <input type="text" placeholder="enter current condition..." class="mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold w-14/10 focus:outline-blue-300 bg-blue-50" v-model="model.orders.current_condition">
+              <input type="text" placeholder="enter  condition..." class="w-7/8 mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold lg:w-14/10 md:w-14/10 focus:outline-blue-300 bg-blue-50" v-model="model.orders.current_condition">
           </div>
-            <div class="ml-24">
+            <div class="lg:ml-24 md:ml-24 ml-1">
               <p class="text-sm">Trucks Owner</p>
 
                   
-                  <input type="text" placeholder="enter trucks owner..." class="mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold w-14/10 focus:outline-blue-300 bg-blue-50" v-model="model.orders.truks_owner">
+                  <input type="text" placeholder="enter owner..." class="w-7/8 mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold lg:w-14/10 md:w-14/10 focus:outline-blue-300 bg-blue-50" v-model="model.orders.truks_owner">
              
           </div>
           
@@ -166,13 +162,13 @@
 
           <div>
               <p class="text-sm">Payment Collected</p>
-              <input type="text" placeholder="enter payment state..." class="mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold w-14/10 focus:outline-blue-300 bg-blue-50" v-model="model.orders.payment_collected">
+              <input type="text" placeholder="enter state..." class="w-7/8 mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold lg:w-14/10 md:w-14/10 focus:outline-blue-300 bg-blue-50" v-model="model.orders.payment_collected">
           </div>
-            <div class="ml-24">
+            <div class="lg:ml-24 md:ml-24 ml-1">
               <p class="text-sm">Month</p>
 
                   
-                  <input type="date" placeholder="enter month..." class="mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold w-19/10 focus:outline-blue-300 bg-blue-50" v-model="model.orders.month">
+                  <input type="date" placeholder="enter month..." class="w-7/8 mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold lg:w-19/10 md:w-19/10 focus:outline-blue-300 bg-blue-50" v-model="model.orders.month">
              
           </div>
         </div>
@@ -188,7 +184,7 @@
          
       </div>
         </div>
-        <div class="w-4/5 ml-50">
+        <div class="lg:w-4/5 md:w-4/5 w-6/7 lg:ml-50 md:ml-50 ml-20">
             <Button class="w-1/2  bg-blue-500 rounded-md mt-5 p-2 text-white hover:bg-cyan-600 cursor-pointer" @click="createOrder">Create Order</Button>
         </div>
     </div>
@@ -196,7 +192,7 @@
 </div>
 <div class="hidden lg:block md:block">
 
-  <div class="bg-white flex    ml-80 md:ml-10 p-5 w-3/4 md:w-5/6 shadow-sm rounded-md">
+  <div class="bg-white flex    lg:ml-80 md:ml-10 p-5 lg:w-3/4 md:w-5/6 shadow-sm rounded-md">
 
      
   <div class=" ">
@@ -207,7 +203,7 @@
     class="border-gray-300"
       variant="outline"
       :class="cn(
-        'w-[280px] md:w-11/11 justify-start text-left font-normal',
+        'lg:w-[280px] md:w-11/11 justify-start text-left font-normal',
         !value && 'text-muted-foreground',
       )"
     >
@@ -239,7 +235,7 @@
     class="border-gray-300"
       variant="outline"
       :class="cn(
-        'w-[280px] md:w-11/11 justify-start text-left font-normal',
+        'lg:w-[280px] md:w-11/11 justify-start text-left font-normal',
         !value && 'text-muted-foreground',
       )"
     >
@@ -264,15 +260,12 @@
 </Popover>
 </div>
 <div class="ml-3 mt-6">
-      <Button class="bg-blue-500 text-white px-20 md:px-10 hover:bg-cyan-600 cursor-pointer">Get Report</Button>
+      <Button class="bg-blue-500 text-white lg:px-20 md:px-10 hover:bg-cyan-600 cursor-pointer">Get Report</Button>
   </div>
   </div> 
 </div>
 <div class="block lg:hidden md:hidden">
-
-  <div class="bg-white  p-5 w-5/6 mx-auto shadow-sm rounded-md">
-
-     
+  <div class="bg-white  p-5 w-5/6 mx-auto shadow-sm rounded-md">   
   <div class=" ">
 <label for="" class="text-sm">From</label> <br>
 <Popover >
@@ -295,9 +288,6 @@
           {{ df.format(value.start.toDate(getLocalTimeZone())) }}
         </template>
       </template>
-      <!-- <template v-else>
-        Pick a date
-      </template> -->
     </Button>
   </PopoverTrigger>
   <PopoverContent class="w-auto p-0">
@@ -503,11 +493,11 @@
    v-if="activePopId === order.id"
     class="absolute top-full -mt-7  right-0 z-50 w-24/11 border border-gray-300 rounded-md bg-white p-3 shadow-lg"
   >
-    <div class="flex w-4/5 mx-auto cursor-pointer">
+    <div class="flex w-4/5 mx-auto cursor-pointer" @click="openEditModal(order)">
       <i class="fa-solid fa-pen"></i>
       <p class="ml-2">Edit</p>
     </div>
-    <div class="flex w-4/5 mx-auto mt-3 cursor-pointer">
+    <div class="flex w-4/5 mx-auto mt-3 cursor-pointer" @click="deleteOrder(order.id)">
       <i class="fa-solid fa-trash"></i>
       <p class="ml-2">Delete</p>
     </div>
@@ -686,25 +676,214 @@
                    <TableCell class="">
                  
                 </TableCell>
-                  <TableCell class="">
-                   <i class="fa-solid fa-list"></i>
-                </TableCell>
-             <div class="">
-<div class="">
-<div class="flex">
-<i class="fa-solid fa-pen"></i>
-<p>Edit</p>
-</div>
-<div>
+             <TableCell class="relative">
+  <i class="fa-solid fa-list cursor-pointer" :class="activePopId ===order.id?'text-blue-400':'text-gray-400'"  @click="togglePopup(order.id)"></i>
 
-</div>
-</div>
-             </div>
+  <div
+   v-if="activePopId === order.id"
+    class="absolute top-full -mt-7  right-0 z-50 w-24/11 border border-gray-300 rounded-md bg-white p-3 shadow-lg"
+  >
+    <div class="flex w-4/5 mx-auto cursor-pointer" @click="openEditModal(order)">
+      <i class="fa-solid fa-pen"></i>
+      <p class="ml-2">Edit</p>
+    </div>
+    <div class="flex w-4/5 mx-auto mt-3 cursor-pointer" @click="deleteOrder(order.id)">
+      <i class="fa-solid fa-trash"></i>
+      <p class="ml-2">Delete</p>
+    </div>
+  </div>
+</TableCell>
+
               </TableRow>
             </TableBody>
           </Table>
            </div>
+                  <div class="mt-3  bg-white p-1 ">
+            
+             <div class="flex gap-2 mt-4 items-center justify-end">
+           <button @click="changePage(currentPage-1)" :disabled="currentPage===1" class="px-3 py-1  rounded disabled:opacity-50 cursor-pointer">
+             <i class="fa-solid fa-arrow-left"></i>
+           </button>
+           <button v-for="page in lastPage" :key="page" @click="changePage(page)" :class="['px-3 py-1 rounded',page===currentPage?'bg-blue-500 text-white cursor-pointer':'bg-transparent cursor-pointer']">
+           {{ page }}
+           </button>
+           <button @click="changePage(currentPage+1)" :disabled="currentPage===lastPage" class="px-3 py-1  rounded disabled:opacity-50 cursor-pointer">
+           <i class="fa-solid fa-arrow-right"></i>
+           </button>
+             </div>
+           
+           </div>
     </div> 
+
+  <div class="fixed modal inset-0 bg-transaparent bg-opacity-50 flex items-center justify-center z-50 no-scrollbar roundd-md pt-35 pb-20 " v-if="editOrderModal">
+
+     <div class="content bg-white shadow-md lg:w-1/2 lg:ml-70 w-3/4 -ml-17 md:-ml-35  p-3 rounded-lg  relative overflow-y-auto max-h-[90vh] no-scrollbar pb-10 lg:px-10">
+      <!-- <button @click="modalOpen = false" class="lg:ml-150 md:ml-150 ml-60 cursor-pointer bg-red-500 lg:w-1/18 lg:h-8 md:w-1/15 md:h-11 w-1/6 h-12 rounded-4xl text-white"><i class="fa-solid fa-xmark text-2xl"></i></button> -->
+        <div class="text-center">
+
+            <h1 class=" heading font-bold text-lg mt-10 ">Edit Order</h1>
+           
+        </div>
+        <div class="flex mt-5">
+          <div>
+              <p class="text-sm">Order Name</p>
+              <input type="text" placeholder="enter order name..." class="w-7/8 mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold lg:w-14/10 md:w-14/10 focus:outline-blue-300 bg-blue-50" v-model="selectedOrder.order_name">
+          </div>
+            <div class="lg:ml-24 md:ml-24 ml-1">
+              <p class="text-sm">Client  Name</p> 
+                  <input type="text" placeholder="enter client name..." class="w-7/8 mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold lg:w-14/10 md:w-14/10 focus:outline-blue-300 bg-blue-50" v-model="selectedOrder.client_name">
+          </div>
+        </div>
+          <div class="flex mt-5">
+
+          <div>
+              <p class="text-sm">Plate Number</p>
+              <input type="text" placeholder="enter plate number..." class="w-7/8 mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold lg:w-14/10 md:w-14/10 focus:outline-blue-300 bg-blue-50" v-model="selectedOrder.plate_number">
+          </div>
+            <div class="lg:ml-24 md:ml-24 ml-1">
+              <p class="text-sm">Driver  Name</p>
+
+                  
+                  <input type="text" placeholder="enter driver name..." class="w-7/8 mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold lg:w-14/10 md:w-14/10 focus:outline-blue-300 bg-blue-50" v-model="selectedOrder.driver_name">
+             
+          </div>
+        </div>
+          <div class="flex mt-5">
+
+          <div>
+              <p class="text-sm">Phone Number</p>
+              <input type="text" placeholder="enter phone ..." class="w-7/8 mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold lg:w-14/10 md:w-14/10 focus:outline-blue-300 bg-blue-50" v-model="selectedOrder.phone_number">
+          </div>
+            <div class="lg:ml-24 md:ml-24 ml-1">
+              <p class="text-sm">Loading Place</p>
+
+                  
+                  <input type="text" placeholder="enter loading ..." class="w-7/8 mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold lg:w-14/10 md:w-14/10 focus:outline-blue-300 bg-blue-50" v-model="selectedOrder.loading_place">
+             
+          </div>
+        </div>
+          <div class="flex mt-5">
+
+          <div>
+              <p class="text-sm">Destination</p>
+              <input type="text" placeholder="enter destination..." class="w-7/8 mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold lg:w-14/10 md:w-14/10 focus:outline-blue-300 bg-blue-50" v-model="selectedOrder.destination">
+          </div>
+            <div class="lg:ml-24 md:ml-24">
+              <p class="text-sm">Load Type</p>
+
+                  
+                  <input type="text" placeholder="enter load type..." class="w-7/8 mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold lg:w-14/10 md:w-14/10 focus:outline-blue-300 bg-blue-50" v-model="selectedOrder.load_type">
+             
+          </div>
+        </div>
+          <div class="flex mt-5">
+
+          <div>
+              <p class="text-sm">Quintal</p>
+              <input type="number" placeholder="enter quintal amount" class="w-7/8 mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold lg:w-14/10 md:w-14/10 focus:outline-blue-300 bg-blue-50" v-model="selectedOrder.quintal">
+          </div>
+            <div class="lg:ml-24 md:ml-24 ml-1">
+              <p class="text-sm">Given Tariff</p>
+
+                  
+                  <input type="number" placeholder="enter given tariff..." class="w-7/8 mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold lg:w-14/10 md:w-14/10 focus:outline-blue-300 bg-blue-50" v-model="selectedOrder.given_tariff">
+             
+          </div>
+        </div>
+          <div class="flex mt-5">
+
+          <div>
+              <p class="text-sm">Sub Tariff</p>
+              <input type="number" placeholder="enter sub tarif..." class="w-7/8 mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold lg:w-14/10 md:w-14/10  focus:outline-blue-300 bg-blue-50" v-model="selectedOrder.sub_tariff">
+          </div>
+            <div class="lg:ml-24 md:ml-24 ml-1 ">
+              <p class="text-sm">Total Revenue</p>
+
+                  
+                  <input type="number" placeholder="enter  revenue..." class="w-7/8 mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold lg:w-14/10 mg:w-14/10 focus:outline-blue-300 bg-blue-50" v-model="selectedOrder.total_revenue">
+             
+          </div>
+        </div>
+          <div class="flex mt-5">
+
+          <div>
+              <p class="text-sm">Revenue</p>
+              <input type="number" placeholder="enter revenue..." class="w-7/8 mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold lg:w-14/10 md:w-14/10 focus:outline-blue-300 bg-blue-50" v-model="selectedOrder.revenue">
+          </div>
+            <div class="lg:ml-24 md:ml-24 ml-1">
+              <p class="text-sm">To be Paid</p>
+
+                  
+                  <input type="number" placeholder="enter amount..." class="w-7/8 mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold lg:w-14/10 md:w-14/10 focus:outline-blue-300 bg-blue-50" v-model="selectedOrder.to_be_paid">
+             
+          </div>
+        </div>
+          <div class="flex mt-5">
+
+          <div>
+              <p class="text-sm">Arrival Date</p>
+              <input type="date" placeholder="enter arrival date..." class="w-6/7 mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold lg:w-19/10 md:w-19/10 focus:outline-blue-300 bg-blue-50" v-model="selectedOrder.arrival_at_loading_site">
+          </div>
+            <div class="lg:ml-38 md:ml-38 -ml-1">
+              <p class="text-sm">Loading Date</p>
+
+                  
+                  <input type="date" placeholder="enter loading date..." class="w-6/7 mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold lg:w-19/10 md:w-19/10 focus:outline-blue-300 bg-blue-50" v-model="selectedOrder.loading_date">
+             
+          </div>
+        </div>
+          <div class="flex mt-5">
+
+          <div>
+              <p class="text-sm">Current Condition</p>
+              <input type="text" placeholder="enter  condition..." class="w-7/8 mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold lg:w-14/10 md:w-14/10 focus:outline-blue-300 bg-blue-50" v-model="selectedOrder.current_condition">
+          </div>
+            <div class="lg:ml-24 md:ml-24 ml-1">
+              <p class="text-sm">Trucks Owner</p>
+
+                  
+                  <input type="text" placeholder="enter owner..." class="w-7/8 mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold lg:w-14/10 md:w-14/10 focus:outline-blue-300 bg-blue-50" v-model="selectedOrder.truks_owner">
+             
+          </div>
+          
+        </div>
+          <div class="flex mt-5">
+
+          <div>
+              <p class="text-sm">Payment Collected</p>
+              <input type="text" placeholder="enter state..." class="w-7/8 mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold lg:w-14/10 md:w-14/10 focus:outline-blue-300 bg-blue-50" v-model="selectedOrder.payment_collected">
+          </div>
+            <div class="lg:ml-24 md:ml-24 ml-1">
+              <p class="text-sm">Month</p>
+
+                  
+                  <input type="date" placeholder="enter month..." class="w-7/8 mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold lg:w-19/10 md:w-19/10 focus:outline-blue-300 bg-blue-50" v-model="selectedOrder.month">
+             
+          </div>
+        </div>
+        <div class="mt-5">
+                  <div class="">
+          <p class="text-sm">Choose Vehicle </p>
+
+<select id="" v-model="selectedOrder.vehicle_id"  class="mt-2 border border-gray-300 rounded-md p-2 placeholder:text-sm font-semibold w-5/10 focus:outline-blue-300 bg-blue-50">
+<!-- <option disabled value="">Please select one</option> -->
+<option v-for="vehicle in vehicles" :key="vehicle" :value="vehicle.id">{{ vehicle.plate_number }}</option>
+
+</select>
+         
+      </div>
+        </div>
+        <div class="flex lg:w-3/4 lg:ml-35">
+          <div class="lg:w-10/11 md:w-4/5 w-6/7   ">
+            <button @click="editOrderModal = false" type="button" class="w-2/3  bg-red-500 rounded-md mt-5 p-2 text-white hover:bg-red-700 cursor-pointer">Cancel</button>
+          </div>
+          <div class="lg:w-10/11 md:w-4/5 w-6/7  lg:-ml-20 ">
+              <Button class="w-2/3  bg-blue-500 rounded-md mt-5 p-2 text-white hover:bg-cyan-600 cursor-pointer" @click="submitEdit">Update Order</Button>
+          </div>
+        </div>
+    </div>
+
+</div>
 </div>
 <div class="hidden lg:block">
 
@@ -719,6 +898,7 @@
 import Navbar from '@/components/Admin/Navbar.vue';
 import SideBar from '@/components/Admin/SideBar.vue';
 import Button from '@/components/ui/button/Button.vue';
+import { useToast } from 'vue-toastification'
 
 import axios from 'axios';
 // import Table from '@/components/ui/table/Table.vue';
@@ -744,11 +924,64 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { RangeCalendar } from "@/components/ui/range-calendar";
 import Input from '@/components/ui/input/Input.vue';
 import Footer from '@/components/Admin/Footer.vue';
+const toast = useToast()
 const df = new DateFormatter("en-US", {
   dateStyle: "medium",
 });
+const deleteOrder = async(id)=>{
+  const confirmed = confirm('Are you sure you want to delete this order?')
+  if(confirmed){
+    activePopId.value = null
+    const response  = await axios.delete(`http://127.0.0.1:8000/api/orders/${id}`)
+    filteredOrders.value = filteredOrders.value.filter(order=>order.id!==id)
+    console.log('response',response.data.message)
+    
+    toast.success('Order Deleted Successfully')
 
+fetchOrders();
+  }
+}
+const editOrderModal = ref(false);
+const selectedOrder = ref({});
 const activePopId = ref(null)
+
+const openEditModal = (order)=>{
+  activePopId.value = null
+selectedOrder.value = {...order};
+editOrderModal.value = true
+}
+const submitEdit = async()=>{
+  try{
+    const response = await axios.put(`http://127.0.0.1:8000/api/orders/${selectedOrder.value.id}`,selectedOrder.value)
+    const data = response.data.orders
+   // console.log('response',response)
+      if (response.status ===200) {
+      const index = filteredOrders.value.findIndex(o =>o.id === selectedOrder.value.id);
+     // console.log('index',index)
+      if (index !== -1) {
+        filteredOrders.value[index] = { ...selectedOrder.value };
+         editOrderModal.value = false;
+       //  console.log('update successfull')
+        //  window.location.reload();
+  toast.success('Order updated successfully!', {
+  position: 'top-right',
+  timeout: 3000,
+  closeOnClick: true,
+  pauseOnHover: true,
+})
+      }
+
+      editOrderModal.value = false;
+    } else {
+      console.error('Update failed:', data);
+       //editOrderModal.value = false;
+    }
+  } catch (err) {
+    console.error('Error submitting edit:', err);
+    toast.error('Failed to update order')
+  
+  }
+}
 const togglePopup = (id)=>{
   activePopId.value = activePopId.value ===id?null:id
 }
@@ -845,7 +1078,7 @@ const createOrder = ()=>{
   ).then((res)=>{
     console.log('order created successfully',res)
     modalOpen.value = false
-    fetchOrders();
+     window.location.reload();
   })
 
 }

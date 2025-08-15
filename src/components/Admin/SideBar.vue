@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <div class=" fixed lg:top-16 top-0 left-0 h-screen bg-gray-900 lg:w-1/5 w-2/3 md:w-1/3  border-t border-t-gray-700  overflow-y-auto pb-50 px-3">
+    <div class=" fixed lg:top-16 top-0 left-0 h-screen md:h-200 bg-gray-900 lg:w-1/5 w-2/3 md:w-1/3  border-t border-t-gray-700  overflow-y-auto pb-50 px-3">
 <div class="pt-10 flex">
     <p class="text-gray-400 text-xs ">GENERAL</p>
       <button 

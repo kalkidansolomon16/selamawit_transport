@@ -232,7 +232,7 @@
             <Card class="border-gray-200 rounded-md bg-white w-11/11 ">
                 <CardContent>
                     <div class="flex justify-between">
-                        <div><i class="fa-regular fa-user text-2xl"></i></div>
+                        <div><i class="fa-solid fa-users text-2xl text-red-400"></i></div>
                         <div class="ml-9"> 
                             <h1 class="font-semibold text-right">{{ employeeCount }}.0</h1>
                             <p class="text-sm">Employees</p>
@@ -245,7 +245,7 @@
             <Card class="border-gray-200 rounded-md bg-white w-11/11 ">
                 <CardContent>
                     <div class="flex justify-between">
-                        <div><i class="fa-solid fa-truck text-2xl text-blue-400"></i></div>
+                        <div><i class="fa-regular fa-clipboard text-2xl text-green-600"></i></div>
                         <div class="ml-9"> 
                    <h1 class="font-semibold text-right">{{ orderCount }}.0</h1>
 <p class="text-sm">Orders</p>
@@ -289,7 +289,7 @@
             <Card class="border-gray-200 rounded-md bg-white w-11/11 ">
                 <CardContent>
                     <div class="flex justify-between">
-                        <div><i class="fa-regular fa-user text-2xl"></i></div>
+                        <div><i class="fa-solid fa-money-bill text-2xl"></i></div>
                         <div class="ml-9"> 
                             <h1 class="font-semibold text-right">{{ totalRevennue }}.0</h1>
                             <p class="text-sm">Yearly Income</p>
@@ -302,7 +302,7 @@
             <Card class="border-gray-200 rounded-md bg-white w-11/11 ">
                 <CardContent>
                     <div class="flex justify-between">
-                        <div><i class="fa-solid fa-truck text-2xl text-blue-400"></i></div>
+                        <div><i class="fa-solid fa-e text-2xl text-red-400"></i></div>
                         <div class="ml-9"> 
                    <h1 class="font-semibold text-right">{{ totalAmount }}.0</h1>
 <p class="text-sm">Yearly Expense</p>
@@ -346,7 +346,7 @@
             <Card class="border-gray-200 rounded-md bg-white w-11/11 ">
                 <CardContent>
                     <div class="flex justify-between">
-                        <div><i class="fa-regular fa-user text-2xl"></i></div>
+                        <div><i class="fa-solid fa-money-bill text-2xl"></i></div>
                         <div class="ml-9"> 
                             <h1 class="font-semibold text-right">0.0</h1>
                             <p class="text-sm">Monthly Income</p>
@@ -359,7 +359,7 @@
             <Card class="border-gray-200 rounded-md bg-white w-11/11 ">
                 <CardContent>
                     <div class="flex justify-between">
-                        <div><i class="fa-solid fa-truck text-2xl text-blue-400"></i></div>
+                        <div><i class="fa-solid fa-e text-2xl text-red-400"></i></div>
                         <div class="ml-9"> 
                    <h1 class="font-semibold text-right">0.0</h1>
 <p class="text-sm">Monthly Expense</p>
